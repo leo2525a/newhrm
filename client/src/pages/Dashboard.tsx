@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Row, Col, Card, Statistic } from 'antd';
 import {
   UserOutlined,

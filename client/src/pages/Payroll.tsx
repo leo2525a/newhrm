@@ -1,5 +1,4 @@
-import React from 'react';
-import { Table, Card, Input, Button, Space } from 'antd';
+import { Table, Card, Input, Button } from 'antd';
 import { SearchOutlined, DownloadOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 

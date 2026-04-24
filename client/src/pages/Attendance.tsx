@@ -1,6 +1,5 @@
-import React from 'react';
-import { Table, Card, Input, DatePicker, Space } from 'antd';
-import { SearchOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { Table, Card, Input, DatePicker } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 
 interface Attendance {

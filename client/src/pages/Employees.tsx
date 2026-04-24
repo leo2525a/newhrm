@@ -1,4 +1,3 @@
-import React from 'react';
 import { Table, Button, Space, Card, Input, Popconfirm } from 'antd';
 import { PlusOutlined, SearchOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
@@ -42,7 +41,7 @@ export default function Employees() {
     {
       title: '操作',
       key: 'action',
-      render: (_, record) => (
+      render: (_) => (
         <Space size="middle">
           <Button type="link" icon={<EditOutlined />}>編輯</Button>
           <Popconfirm

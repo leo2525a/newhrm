@@ -1,6 +1,5 @@
-import React from 'react';
-import { Row, Col, Card, Button, Space } from 'antd';
-import { BarChartOutlined, DownloadOutlined } from '@ant-design/icons';
+import { Row, Col, Card, Button } from 'antd';
+import { DownloadOutlined } from '@ant-design/icons';
 
 export default function Reports() {
   const reportTemplates = [
