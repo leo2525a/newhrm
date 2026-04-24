@@ -21,20 +21,40 @@ A full-featured HR Management System inspired by BambooHR and Info-Tech HRMS (Ho
 - **Backend**: Node.js + Express + TypeScript
 - **Database**: MongoDB + Mongoose
 - **Authentication**: JWT + bcrypt
-- **Frontend**: React (coming soon)
+- **Frontend**: React 18 + TypeScript + Vite + Ant Design
+- **State Management**: React Query
+
+## Project Structure
+
+```
+hrm-system/
+├── src/                # Backend source code
+│   ├── routes/         # API routes
+│   ├── controllers/    # Request handlers
+│   ├── models/         # Mongoose models
+│   └── config/         # Configuration
+├── client/             # React frontend
+│   ├── src/
+│   │   ├── pages/      # Page components (Dashboard, Employees, etc.)
+│   │   ├── components/ # Reusable components (Layout, ProtectedRoute)
+│   │   ├── context/    # Auth context
+│   │   └── utils/      # Utilities (axios config)
+│   └── dist/           # Production build (auto-generated)
+└── dist/               # Backend build (auto-generated)
+```
 
 ## Installation
 
+### Full Install (Backend + Frontend)
+
 ```bash
-# Install dependencies
+# Install all dependencies and build both frontend and backend
 npm install
+npm run build
 
 # Copy environment variables
 cp .env.example .env
-# Edit .env with your settings
-
-# Build
-npm run build
+# Edit .env with your MongoDB connection and JWT secret
 
 # Start server
 npm start
@@ -43,8 +63,18 @@ npm start
 ## Development
 
 ```bash
+# Backend development (port 3000)
+npm run dev
+
+# Frontend development (port 3001, with proxy to backend API)
+cd client
+npm install
 npm run dev
 ```
+
+## Production
+
+When `NODE_ENV=production`, the backend automatically serves the built React frontend from `client/dist`. You only need to run one Node.js process that serves both API and frontend.
 
 ## API Endpoints
 
