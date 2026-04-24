@@ -5,8 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
-    "build": "npx --yes typescript && cd client && npm install && npm run build",
-    "build:backend": "npx --yes typescript",
+    "build": "npx --yes tsc && cd client && npm install && npm run build",
+    "build:backend": "npx --yes tsc",
     "build:frontend": "cd client && npm install && npm run build",
     "start": "node dist/server.js",
     "test": "jest"
